@@ -1,8 +1,11 @@
 package com.szxs.entity;
+
+import java.io.Serializable;
+
 /**
  * 权限分配
  */
-public class TUserRole {
+public class TUserRole implements Serializable {
   private String userId;
   private String roleId;
   public String getUserId() {

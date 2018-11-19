@@ -1,9 +1,11 @@
 package com.szxs.entity;
 
+import java.io.Serializable;
+
 /**
  * 平台利润类
  */
-public class TCooperation {
+public class TCooperation implements Serializable {
   private String id;
   private String corporateName;
   private String corporateCode;
