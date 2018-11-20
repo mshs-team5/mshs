@@ -9,4 +9,5 @@ public interface AgentService{
     Integer addAgent(Agent agent);
     Integer delAgent(Integer id);
     Integer updateAgent(Integer id);
+    Agent queryByid(Integer id);
 }
