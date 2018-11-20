@@ -12,8 +12,15 @@
         default-autowire="byName">
 
     <dubbo:application name="dubbox-entity-provider" />
-    <dubbo:registry address="zookeeper://172.16.16.195:2181" />
+    <dubbo:registry address="zookeeper://172.16.7.113:2181" />
     <dubbo:protocol name="dubbo" serialization="kryo"/>
+
+
+    <bean name="tActivityphotosService" class="com.szxs.service.impl.TActivityphotosServiceImpl" />
+    <dubbo:service interface="com.szxs.service.TActivityphotosService" ref="tActivityphotosService" protocol="dubbo" />
+
+    <bean name="tTheportalService" class="com.szxs.service.impl.TTheportalServiceImpl" />
+    <dubbo:service interface="com.szxs.service.TTheportalService" ref="tTheportalService" protocol="dubbo" />
 
     <bean name="userService" class="com.szxs.service.impl.UserServiceImpl" />
     <dubbo:service interface="com.szxs.service.UserService" ref="userService" protocol="dubbo" />
@@ -27,7 +34,7 @@
     <!--配置数据源 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@localhost:1522:orcl2"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
         <property name="username" value="mshs"/>
         <property name="password" value="mshspwd"/>
 
