@@ -10,7 +10,7 @@ public class TRolesService implements com.szxs.service.TRolesService {
     @Resource
     private TRoleDao tRoleDao;
     public List<TRoles> queryAll(TRoles tRoles, Integer integer, Integer integer1, Integer integer2) {
-        return tRoleDao.queryAll();
+        return tRoleDao.queryAll(tRoles,integer,integer1);
     }
     public Integer addTRoles(TRoles tRoles) {
         return null;

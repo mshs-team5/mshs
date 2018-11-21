@@ -1,17 +1,10 @@
 package com.szxs.service.impl;
-
-
-
 import com.szxs.dao.TUserDao;
 import com.szxs.entity.TUsers;
-
 import com.szxs.service.UserService;
-
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 import java.util.List;
-
 @Service
 public class UserServiceImpl implements UserService{
   @Resource

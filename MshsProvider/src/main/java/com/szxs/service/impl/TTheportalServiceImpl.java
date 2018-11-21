@@ -14,7 +14,7 @@ public class TTheportalServiceImpl implements TTheportalService {
     public TTheportalDao tTheportalDao;
 
     public List<TTheportal> queryAll(TTheportal tTheportal, Integer integer, Integer integer1, Integer integer2) {
-        return tTheportalDao.queryAll(tTheportal,integer,integer1,integer2);
+        return tTheportalDao.queryAll(tTheportal,integer,integer1);
     }
 
     public Integer addTTheportal(TTheportal tTheportal) {

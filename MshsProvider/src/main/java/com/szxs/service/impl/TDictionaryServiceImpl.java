@@ -12,6 +12,6 @@ public class TDictionaryServiceImpl implements TDictionaryService {
     @Resource
     public TDictionaryDao tDictionaryDao;
     public List<TDictionary> queryAll(TDictionary tDictionary, Integer integer, Integer integer1, Integer integer2) {
-        return tDictionaryDao.queryAll(tDictionary,integer,integer1,integer2);
+        return tDictionaryDao.queryAll(tDictionary,integer,integer1);
     }
 }

@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface TDictionaryDao {
-    List<TDictionary> queryAll(@Param("tDictionary") TDictionary tDictionary,@Param("from")Integer from,@Param("end") Integer end, @Param("draw")Integer draw);
+    List<TDictionary> queryAll(@Param("tDictionary") TDictionary tDictionary,@Param("from")Integer from,@Param("end") Integer end);
 }

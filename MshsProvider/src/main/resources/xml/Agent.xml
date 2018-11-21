@@ -5,7 +5,11 @@
 <mapper namespace="com.szxs.dao.AgentDao">
 
     <select id="queryAll" resultType="Agent">
-        select * from Agent
+        select * from (
+        select temp.*,rownum row_ from (
+        select * from AGENT a
+        ) temp
+        ) where row_ between #{from}+1 and #{from}+#{end}
     </select>
     <insert id="addAgent">
         insert into AGENT

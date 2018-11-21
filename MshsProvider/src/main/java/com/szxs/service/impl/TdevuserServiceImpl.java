@@ -14,6 +14,6 @@ public class TdevuserServiceImpl implements TdevuserService {
     @Resource
     public T_devuserDao t_devuserDao;
     public List<TDevuser> queryAll(TDevuser tDevuser, Integer integer, Integer integer1, Integer integer2) {
-        return t_devuserDao.queryAll(tDevuser,integer,integer1,integer2);
+        return t_devuserDao.queryAll(tDevuser,integer,integer1);
     }
 }
