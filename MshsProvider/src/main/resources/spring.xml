@@ -47,8 +47,8 @@
         <property name="typeAliasesPackage" value="com.szxs.entity" />
         <property name="mapperLocations" value="classpath:xml/*.xml" />
     </bean>
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.szxs.dao" />
-        <property name="sqlSessionFactoryBeanName" value="sqlSession" />
-    </bean>
-</beans>
+<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<property name="basePackage" value="com.szxs.dao" />
+<property name="sqlSessionFactoryBeanName" value="sqlSession" />
+</bean>
+ </beans>
