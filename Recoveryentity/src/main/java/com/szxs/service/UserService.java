@@ -1,12 +1,9 @@
 package com.szxs.service;
 
-import com.szxs.entity.Agent;
-import com.szxs.entity.JqueryTable;
-import com.szxs.entity.TCooperation;
-import com.szxs.entity.TUsers;
-import sun.management.resources.agent;
 
-import java.util.List;
+import com.szxs.entity.JqueryTable;
+import com.szxs.entity.TUsers;
+
 
 public interface UserService{
 
