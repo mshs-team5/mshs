@@ -33,4 +33,8 @@ public class AgentServiceImpl implements AgentService {
     public Agent queryByid(Integer integer) {
         return null;
     }
+
+    public Integer queryAgentsRows(Agent agent) {
+        return agentDao.queryAgentsRows(agent) ;
+    }
 }

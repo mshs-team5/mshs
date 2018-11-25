@@ -5,7 +5,15 @@
 <mapper namespace="com.szxs.dao.TCityDao">
 
     <select id="queryAll" resultType="TCity">
-     select * from T_CITY
+     select * from (
+        select temp.*,rownum row_ from (
+        select * from T_CITY a
+        ) temp
+        ) where row_ between #{from}+1 and #{from}+#{end}
+    </select>
+
+    <select id="queryTCityRows" resultType="TCity">
+      select  count(1) from T_CITY
     </select>
 
 </mapper>
