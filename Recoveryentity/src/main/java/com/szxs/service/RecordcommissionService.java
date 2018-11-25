@@ -1,5 +1,6 @@
 package com.szxs.service;
 
+import com.szxs.entity.JqueryTable;
 import com.szxs.entity.Recordcommission;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface RecordcommissionService {
 
-     List<Recordcommission> queryAll(Recordcommission recordcommission, Integer from , Integer end, Integer draw);
+     JqueryTable<Recordcommission> queryAll(Recordcommission recordcommission, Integer from , Integer end, Integer draw);
      Integer addRecordcommission(Recordcommission recordcommission);
      Integer delRecordcommission(Integer id);
      Integer updateRecordcommission(Integer id);

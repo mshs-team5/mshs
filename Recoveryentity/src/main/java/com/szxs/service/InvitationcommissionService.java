@@ -1,5 +1,7 @@
 package com.szxs.service;
 import com.szxs.entity.Invitationcommission;
+import com.szxs.entity.JqueryTable;
+
 import java.util.List;
 
 public interface InvitationcommissionService {
@@ -11,7 +13,7 @@ public interface InvitationcommissionService {
      * @param draw
      * @return list
      */
-    List<Invitationcommission> queryAll(Invitationcommission invitationcommission,Integer from ,Integer end,Integer draw);
+    JqueryTable<Invitationcommission> queryAll(Invitationcommission invitationcommission, Integer from , Integer end, Integer draw);
 
     /**
      * 添加
