@@ -10,6 +10,6 @@ public interface TRolesService {
     Integer addtttRoles(TRoles tRoles);
     Integer deltttRoles(String  uuid);
     Integer updatetttRoles(TRoles tRoles);
-    TDevuser queryByid(String id);
+    TRoles queryByid(String id);
     Integer querytttRolesRows(TRoles tRoles);
 }
