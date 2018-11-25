@@ -12,27 +12,30 @@ public class AgentServiceImpl implements AgentService {
     @Resource
     private AgentDao agentDao;
     public JqueryTable queryAll(Agent agent, Integer from, Integer end, Integer draw) {
-        JqueryTable table = new JqueryTable();
+        JqueryTable<Agent> table = new JqueryTable();
         table.setDraw(draw);
         table.setRecordsTotal(agentDao.queryAgentsRows(agent));
         table.setRecordsFiltered(table.getRecordsTotal());
         table.setData(agentDao.queryAll(agent,from,end));
         return table ;
     }
-
     public Integer addAgent(Agent agent) {
         return null;
     }
-    public Integer delAgent(Integer integer) {
-        return null;
-    }
-    public Integer updateAgent(Integer integer) {
+
+    public Integer delAgent(String s) {
         return null;
     }
 
-    public Agent queryByid(Integer integer) {
+    public Integer updateAgent(Agent agent) {
         return null;
     }
+
+    public Agent queryByid(String s) {
+        return null;
+    }
+
+
 
     public Integer queryAgentsRows(Agent agent) {
         return agentDao.queryAgentsRows(agent) ;
