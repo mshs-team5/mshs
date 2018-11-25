@@ -37,4 +37,7 @@
         delete from agent
         where uuid=#{uuid}
     </delete>
+    <select id="queryAgentRows" resultType="Agent">
+      select  count(1) from agent
+    </select>
 </mapper>
