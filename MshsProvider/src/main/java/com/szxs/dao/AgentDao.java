@@ -7,6 +7,6 @@ public interface AgentDao {
        Integer addAgent(Agent agent);
        List<Agent> queryAll(@Param("agent") Agent agent,@Param("from") Integer from, @Param("end")Integer end);
        Integer updateAgent(Agent agent);
-       Integer delAgent(Agent agent);
+       Integer delAgent(String uuid);
        Integer queryAgentsRows(Agent agent);
 }

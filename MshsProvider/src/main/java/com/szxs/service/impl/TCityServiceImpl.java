@@ -15,8 +15,8 @@ public class TCityServiceImpl implements TCityService {
    private TCityDao tCityDao;
 
 
-    public JqueryTable queryAll(TCity tCity, Integer from, Integer end, Integer draw) {
-        JqueryTable table = new JqueryTable();
+    public JqueryTable<TCity> queryAll(TCity tCity, Integer from, Integer end, Integer draw) {
+        JqueryTable<TCity> table = new JqueryTable<TCity> ();
         table.setDraw(draw);
         table.setRecordsTotal(tCityDao.queryTCityRows(tCity));
         table.setRecordsFiltered(table.getRecordsTotal());
@@ -28,11 +28,11 @@ public class TCityServiceImpl implements TCityService {
         return null;
     }
 
-    public Integer delTCity(Integer integer) {
+    public Integer delTCity(String uuid) {
         return null;
     }
 
-    public Integer updateTCity(Integer integer) {
+    public Integer updateTCity(TCity tCity) {
         return null;
     }
 

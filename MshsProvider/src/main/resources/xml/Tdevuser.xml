@@ -5,8 +5,29 @@
 <mapper namespace="com.szxs.dao.T_devuserDao">
 
     <select id="queryAll" resultType="TDevuser" >
-        select * from T_DEVUSER
+     select * from (
+        select temp.*,rownum row_ from (
+        select * from T_DEVUSER t
+        ) temp
+        ) where row_ between #{from}+1 and #{from}+#{end}
     </select>
+   <select  id="queryTDevusersRows" resultType="_int">
+      select count(uuid) from T_DEVUSER
+   </select>
+    <insert id="addTDevuser">
+        insert into T_DEVUSER
+        VALUES()
+    </insert>
+    <update id="updateTDevusersRows">
+        update T_DEVUSER
+        <set>
 
+        </set>
+        where uuid=#{uuid}
+    </update>
+    <delete id="delTDevuser">
+        delete from T_DEVUSER
+        where uuid=#{uuid}
+    </delete>
 
 </mapper>

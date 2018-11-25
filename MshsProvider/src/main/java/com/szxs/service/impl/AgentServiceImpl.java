@@ -5,6 +5,7 @@ import com.szxs.entity.Agent;
 import com.szxs.entity.JqueryTable;
 import com.szxs.service.AgentService;
 import org.springframework.stereotype.Service;
+import sun.management.resources.agent;
 
 import javax.annotation.Resource;
 @Service
@@ -23,7 +24,11 @@ public class AgentServiceImpl implements AgentService {
         return null;
     }
 
-    public Integer delAgent(String s) {
+
+
+
+
+    public Integer delAgent(String uuid) {
         return null;
     }
 
@@ -31,7 +36,10 @@ public class AgentServiceImpl implements AgentService {
         return null;
     }
 
-    public Agent queryByid(String s) {
+
+
+    public Agent queryByid(String uuid) {
+
         return null;
     }
 
