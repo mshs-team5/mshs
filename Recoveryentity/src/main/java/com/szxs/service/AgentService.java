@@ -6,7 +6,7 @@ import com.szxs.entity.JqueryTable;
 import java.util.List;
 
 public interface AgentService{
-    JqueryTable queryAll(Agent agent, Integer from , Integer end, Integer draw);
+    JqueryTable<Agent> queryAll(Agent agent, Integer from , Integer end, Integer draw);
     Integer addAgent(Agent agent);
     Integer delAgent(String uuid);
     Integer updateAgent(Agent agent);
