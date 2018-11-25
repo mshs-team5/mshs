@@ -27,13 +27,13 @@ public interface InvitationcommissionService {
      * @param id
      * @return i
      */
-    Integer delInvitationcommission (Integer id);
+    Integer delInvitationcommission (String id);
 
     /**
      * 更新
      * @param id
      * @return i
      */
-    Integer updateInvitationcommission (Integer id);
+    Integer updateInvitationcommission (Invitationcommission invitationcommission);
 
 }

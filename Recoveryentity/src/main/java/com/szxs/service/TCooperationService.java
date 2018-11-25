@@ -9,6 +9,6 @@ import java.util.List;
 public interface TCooperationService {
     JqueryTable<TCooperation> queryAll(TCooperation tCooperation, Integer from , Integer end, Integer draw);
     Integer addTCooperation(TCooperation tCooperation);
-    Integer delTCooperation(Integer id);
-    Integer updateTCooperation(Integer id);
+    Integer delTCooperation(String uuid);
+    Integer updateTCooperation(TCooperation tCooperation);
 }

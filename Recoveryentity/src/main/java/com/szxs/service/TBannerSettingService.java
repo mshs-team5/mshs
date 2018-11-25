@@ -9,6 +9,6 @@ public interface TBannerSettingService {
 
     JqueryTable<TBannerSetting> queryAll(TBannerSetting agent, Integer from , Integer end, Integer draw);
     Integer addTBannerSetting(TBannerSetting agent);
-    Integer delTBannerSetting(Integer id);
-    Integer updateTBannerSetting(Integer id);
+    Integer delTBannerSetting(String id);
+    Integer updateTBannerSetting(TBannerSetting tBannerSetting);
 }

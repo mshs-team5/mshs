@@ -9,6 +9,6 @@ public interface TUserRoleService {
 
     JqueryTable<TUserRole> queryAll(TUserRole tUserRole, Integer from , Integer end, Integer draw);
     Integer addTUserRole(TUserRole tUserRole);
-    Integer delTUserRole(Integer id);
-    Integer updateTUserRole(Integer id);
+    Integer delTUserRole(String uuid);
+    Integer updateTUserRole(TUserRole tUserRole);
 }

@@ -12,6 +12,6 @@ public interface RecordcommissionService {
 
      JqueryTable<Recordcommission> queryAll(Recordcommission recordcommission, Integer from , Integer end, Integer draw);
      Integer addRecordcommission(Recordcommission recordcommission);
-     Integer delRecordcommission(Integer id);
-     Integer updateRecordcommission(Integer id);
+     Integer delRecordcommission(String id);
+     Integer updateRecordcommission(Recordcommission recordcommission);
 }

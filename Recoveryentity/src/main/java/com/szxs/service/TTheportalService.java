@@ -8,7 +8,7 @@ import java.util.List;
 public interface TTheportalService {
     JqueryTable<TTheportal> queryAll(TTheportal agent, Integer from , Integer end, Integer draw);
     Integer addTTheportal(TTheportal agent);
-    Integer delTTheportal(Integer id);
-    Integer updateTTheportal(Integer id);
+    Integer delTTheportal(String uuid);
+    Integer updateTTheportal(TTheportal tTheportal);
 
 }

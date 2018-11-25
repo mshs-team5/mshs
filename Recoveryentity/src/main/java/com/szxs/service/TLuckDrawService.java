@@ -10,6 +10,6 @@ import java.util.List;
 public interface TLuckDrawService {
     JqueryTable<TLuckDraw> queryAll(TLuckDraw tLuckDraw, Integer from , Integer end, Integer draw);
     Integer addTLuckDraw(TLuckDraw tLuckDraw);
-    Integer delTLuckDraw(Integer id);
-    Integer updateTLuckDraw(Integer id);
+    Integer delTLuckDraw(String uuid);
+    Integer updateTLuckDraw(TLuckDraw tLuckDraw);
 }

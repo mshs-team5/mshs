@@ -6,6 +6,6 @@ import java.util.List;
 public interface TCityService{
     JqueryTable<TCity> queryAll(TCity agent, Integer from , Integer end, Integer draw);
     Integer addTCity(TCity agent);
-    Integer delTCity(Integer id);
-    Integer updateTCity(Integer id);
+    Integer delTCity(String uuid);
+    Integer updateTCity(TCity tCity);
 }

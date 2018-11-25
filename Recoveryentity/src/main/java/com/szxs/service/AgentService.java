@@ -8,8 +8,8 @@ import java.util.List;
 public interface AgentService{
     JqueryTable queryAll(Agent agent, Integer from , Integer end, Integer draw);
     Integer addAgent(Agent agent);
-    Integer delAgent(Integer id);
-    Integer updateAgent(Integer id);
-    Agent queryByid(Integer id);
+    Integer delAgent(String uuid);
+    Integer updateAgent(Agent agent);
+    Agent queryByid(String uuid);
     Integer queryAgentsRows(Agent agent);
 }

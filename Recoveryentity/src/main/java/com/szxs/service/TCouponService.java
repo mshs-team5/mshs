@@ -9,6 +9,6 @@ public interface TCouponService {
 
     JqueryTable<TCoupon> queryAll(TCoupon tCoupon, Integer from , Integer end, Integer draw);
     Integer addTCoupon(TCoupon tCoupon);
-    Integer delTCoupon(Integer id);
-    Integer updateTCoupon(Integer id);
+    Integer delTCoupon(String uuid);
+    Integer updateTCoupon(TCoupon tCoupon);
 }

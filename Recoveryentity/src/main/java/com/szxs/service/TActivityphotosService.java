@@ -8,6 +8,6 @@ import java.util.List;
 public interface TActivityphotosService {
     JqueryTable<TActivityphotos> queryAll(TActivityphotos agent, Integer from , Integer end, Integer draw);
     Integer addTActivityphotos(TActivityphotos agent);
-    Integer delTActivityphotos(Integer id);
-    Integer updateTActivityphotos(Integer id);
+    Integer delTActivityphotos(String uuid);
+    Integer updateTActivityphotos(TActivityphotos activityphotos);
 }
