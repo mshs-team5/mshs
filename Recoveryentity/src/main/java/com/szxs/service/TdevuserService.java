@@ -10,8 +10,8 @@ public interface TdevuserService{
     JqueryTable<TDevuser> queryAll(TDevuser tDevuser, Integer from , Integer end, Integer draw);
 
     Integer addtDevuser(TDevuser tDevuser);
-    Integer deltDevuser(Integer id);
-    Integer updatetDevuser(Integer id);
-    Agent queryByid(Integer id);
+    Integer deltDevuser(String  uuid);
+    Integer updatetDevuser(TDevuser tDevuser);
+    TDevuser queryByid(String id);
     Integer querytDevuserRows(TDevuser tDevuser);
 }

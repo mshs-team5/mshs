@@ -24,14 +24,14 @@ public interface InvitationcommissionService {
 
     /**
      * 删除
-     * @param id
+     * @param
      * @return i
      */
     Integer delInvitationcommission (String id);
 
     /**
      * 更新
-     * @param id
+     * @param
      * @return i
      */
     Integer updateInvitationcommission (Invitationcommission invitationcommission);
