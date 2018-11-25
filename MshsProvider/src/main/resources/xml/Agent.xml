@@ -15,4 +15,26 @@
         insert into AGENT
         values(#{uuid},#{agentName},#{agentAddress},#{agentPhone},#{agentPrice},#{extfield1},#{extfield2})
     </insert>
+    <update id="updateAgent">
+        update agent
+        <set>
+            <if test="agentName!=null and agentName=''">
+                  agentName=#{agentName},
+            </if>
+            <if test="agentAddress=null and agentAddress1=''">
+                agentAddress=#{agentAddress},
+            </if>
+            <if test="agentPhone!=null and agentPhone=''">
+                agentPhone=#{agentPhone},
+            </if>
+            <if test="agentPrice=null and agentPrice=''">
+                agentPrice=#{agentPrice},
+            </if>
+        </set>
+        where uuid=#{uuid}
+    </update>
+    <delete id="delAgent">
+        delete from agent
+        where uuid=#{uuid}
+    </delete>
 </mapper>

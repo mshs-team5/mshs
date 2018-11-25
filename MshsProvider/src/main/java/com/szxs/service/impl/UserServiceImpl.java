@@ -1,5 +1,7 @@
 package com.szxs.service.impl;
 import com.szxs.dao.TUserDao;
+import com.szxs.entity.Agent;
+import com.szxs.entity.JqueryTable;
 import com.szxs.entity.TUsers;
 import com.szxs.service.UserService;
 import org.springframework.stereotype.Service;
@@ -9,8 +11,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
   @Resource
     private TUserDao tUserDao;
-    public List<TUsers> queryAll(TUsers tUsers, Integer from, Integer end, Integer draw) {
-        return tUserDao.queryAll();
+    public JqueryTable<TUsers> queryAll(TUsers tUsers, Integer from, Integer end, Integer draw) {
+        JqueryTable<TUsers> table = new JqueryTable<TUsers> ();
+        return table;
     }
     public Integer addTUsers(TUsers tUsers) {
         return null;

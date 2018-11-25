@@ -1,6 +1,7 @@
 package com.szxs.service.impl;
 
 import com.szxs.dao.TDictionaryDao;
+import com.szxs.entity.JqueryTable;
 import com.szxs.entity.TDictionary;
 import com.szxs.service.TDictionaryService;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,9 @@ import java.util.List;
 public class TDictionaryServiceImpl implements TDictionaryService {
     @Resource
     public TDictionaryDao tDictionaryDao;
-    public List<TDictionary> queryAll(TDictionary tDictionary, Integer integer, Integer integer1, Integer integer2) {
-        return tDictionaryDao.queryAll(tDictionary,integer,integer1);
+    public JqueryTable<TDictionary> queryAll(TDictionary tDictionary, Integer integer, Integer integer1, Integer integer2) {
+
+        JqueryTable<TDictionary> table=new JqueryTable<TDictionary>();
+        return table;
     }
 }
