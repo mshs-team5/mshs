@@ -11,32 +11,33 @@ import java.util.List;
 
 @Service
 public class TdevuserServiceImpl implements TdevuserService{
-
     @Resource
     public T_devuserDao t_devuserDao;
-
-
-    public JqueryTable<TDevuser> queryAll(TDevuser tDevuser, Integer integer, Integer integer1, Integer integer2) {
-        return null;
-    }
-
     public Integer addtDevuser(TDevuser tDevuser) {
         return null;
     }
+    public JqueryTable<TDevuser> queryAll(TDevuser tDevuser, Integer integer, Integer integer1, Integer integer2) {
+        JqueryTable<TDevuser> table=new JqueryTable<TDevuser>();
+        table.setDraw(integer2);
+        table.setRecordsTotal(t_devuserDao.queryTDevusersRows(tDevuser));
+        table.setRecordsFiltered(table.getRecordsTotal());
+        table.setData(t_devuserDao.queryAll(tDevuser,integer,integer1));
+        return table;
 
+    }
     public Integer deltDevuser(String s) {
-        return null;
+        return t_devuserDao.delTDevuser(s);
     }
 
     public Integer updatetDevuser(TDevuser tDevuser) {
-        return null;
+        return t_devuserDao.updateTDevuser(tDevuser);
     }
-
     public TDevuser queryByid(String s) {
-        return null;
+        return t_devuserDao.queryByid(s);
+    }
+    public Integer querytDevuserRows(TDevuser tDevuser) {
+        return t_devuserDao.queryTDevusersRows(tDevuser);
     }
 
-    public Integer querytDevuserRows(TDevuser tDevuser) {
-        return null;
-    }
+
 }

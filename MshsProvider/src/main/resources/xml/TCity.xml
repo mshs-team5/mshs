@@ -12,7 +12,7 @@
         ) where row_ between #{from}+1 and #{from}+#{end}
     </select>
 
-    <select id="queryTCityRows" resultType="TCity">
+    <select id="queryTCityRows" resultType="_int">
       select  count(1) from T_CITY
     </select>
 
