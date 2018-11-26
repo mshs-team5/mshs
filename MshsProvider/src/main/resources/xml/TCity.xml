@@ -16,4 +16,54 @@
       select  count(1) from T_CITY
     </select>
 
+    <insert id="addTCity" >
+        insert into T_CITY VALUES(#{uuid},#{province},#{city},#{pinyin},#{viewOrder},#{hot},#{createdBy},#{creationDate},#{lastUpdateDate},#{extField1},#{extField2},#{memo},#{ll});
+    </insert>
+
+    <delete id="delTCity" >
+        DELETE from T_CITY where id=#{id}
+    </delete>
+    <update id="updateTCity">
+        UPDATE T_CITY
+        <set>
+            <if test="province!=null and province!=''">
+                province=#{province},
+            </if>
+            <if test="city!=null and city!=''">
+                city=#{city},
+            </if>
+            <if test="pinyin!=null and pinyin!=''">
+                pinyin=#{pinyin},
+            </if>
+            <if test="viewOrder!=null and viewOrder!=''">
+                viewOrder=#{viewOrder},
+            </if>
+            <if test="hot!=null and hot!=''">
+                hot=#{hot},
+            </if>
+            <if test="createdBy!=null and createdBy!=''">
+                createdBy=#{createdBy},
+            </if>
+            <if test="creationDate!=null and creationDate!=''">
+                creationDate=#{creationDate},
+            </if>
+            <if test="lastUpdateDate!=null and lastUpdateDate!=''">
+                lastUpdateDate=#{lastUpdateDate},
+            </if>
+            <if test="extField1!=null and extField1!=''">
+                extField1=#{extField1},
+            </if>
+            <if test="extField2!=null and extField2!=''">
+                extField2=#{extField2},
+            </if>ll
+            <if test="memo!=null and memo!=''">
+                memo=#{memo},
+            </if>
+            <if test="ll!=null and ll!=''">
+                ll=#{ll}
+            </if>
+            where uuid=#{uuid}
+        </set>
+    </update>
+
 </mapper>

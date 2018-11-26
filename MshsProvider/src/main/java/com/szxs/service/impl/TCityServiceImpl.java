@@ -25,18 +25,18 @@ public class TCityServiceImpl implements TCityService {
     }
 
     public Integer addTCity(TCity tCity) {
-        return null;
+        return tCityDao.addTCity(tCity);
     }
 
     public Integer delTCity(String uuid) {
-        return null;
+        return tCityDao.delTCity(uuid);
     }
 
     public Integer updateTCity(TCity tCity) {
-        return null;
+        return tCityDao.updateTCity(tCity);
     }
 
     public Integer queryAgentsRows(TCity tCity) {
-        return null;
+        return tCityDao.queryTCityRows(tCity);
     }
 }

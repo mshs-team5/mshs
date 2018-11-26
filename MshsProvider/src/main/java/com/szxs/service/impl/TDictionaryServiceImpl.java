@@ -2,8 +2,10 @@ package com.szxs.service.impl;
 
 import com.szxs.dao.TDictionaryDao;
 import com.szxs.entity.JqueryTable;
+import com.szxs.entity.TDevuser;
 import com.szxs.entity.TDictionary;
 import com.szxs.service.TDictionaryService;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
@@ -34,9 +36,8 @@ public class TDictionaryServiceImpl implements TDictionaryService {
         return tDictionaryDao.updatettDictionary(tDictionary);
     }
 
-    public TDictionary queryByid(String s) {
-        return tDictionaryDao.queryByid(s);
-    }
+
+
 
     public Integer queryttDictionaryRows(TDictionary tDictionary) {
         return tDictionaryDao.queryttDictionaryRows(tDictionary);

@@ -5,7 +5,44 @@
 <mapper namespace="com.szxs.dao.TTheportalDao">
 
     <select id="queryAll" resultType="TTheportal">
-        select * from T_THEPORTAL
+        select * from (
+        select temp.*,rownum row_ from (
+        select * from T_THEPORTAL a
+        ) temp
+        ) where row_ between #{from}+1 and #{from}+#{end}
     </select>
+
+    <select id="queryTCityRows" resultType="_int">
+        select  count(1) from T_CITY
+    </select>
+
+    <insert id="addTTheportal" >
+        insert into T_THEPORTAL VALUES(#{id},#{NAMEPORTAL},#{ADDRESSPORTAL},#{PORTALTIME},#{EXTFIELD1},#{EXTFIELD2})
+    </insert>
+
+    <delete id="delTTTheportal" >
+        DELETE from T_THEPORTAL where id=#{id}
+    </delete>
+    <update id="updateTTheportal">
+        UPDATE T_THEPORTAL
+        <set>
+            <if test="nameportal!=null and nameportal!=''">
+                nameportal=#{nameportal},
+            </if>
+            <if test="addressportal!=null and addressportal!=''">
+                addressportal=#{addressportal},
+            </if>
+            <if test="portaltime!=null and portaltime!=''">
+                portaltime=#{portaltime},
+            </if>
+            <if test="extfield1!=null and extfield1!=''">
+                extfield1=#{extfield1},
+            </if>
+            <if test="extfield2!=null and extfield2!=''">
+                extfield2=#{extfield2},
+            </if>
+            where id=#{id}
+        </set>
+    </update>
 
 </mapper>
