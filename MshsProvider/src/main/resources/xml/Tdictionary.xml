@@ -4,6 +4,45 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.szxs.dao.TDictionaryDao">
     <select id="queryAll" resultType="TDictionary" >
-        select * from T_DICTIONARY
+      select * from (
+        select temp.*,rownum row_ from (
+        select * from T_DICTIONARY a
+        ) temp
+        ) where row_ between #{from}+1 and #{from}+#{end}
+    </select>
+    <insert id="addttDictionary">
+        insert into T_DICTIONARY
+        values(#{id},#{fieldname},#{name},#{code},#{parentId},#{orderby},#{remark},#{key})
+    </insert>
+    <update id="updatettDictionary">
+        update T_DICTIONARY
+        <set>
+            <if test="fieldname!=null and fieldname!=''">
+                fieldname=#{fieldname},
+            </if>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="code!=null and code!=''">
+                code=#{code},
+            </if>
+            <if test="orderby!=null and orderby!=''">
+                orderby=#{orderby},
+            </if>
+            <if test="remark!=null and remark!=''">
+                remark=#{remark},
+            </if>
+            <if test="key!=null and key!=''">
+                key=#{key},
+            </if>
+        </set>
+        where uuid=#{uuid}
+    </update>
+    <delete id="delttDictionary">
+        delete from T_DICTIONARY
+        where uuid=#{uuid}
+    </delete>
+    <select id="queryttDictionaryRows" resultType="TDictionary">
+      select  count(1) from T_DICTIONARY
     </select>
 </mapper>
