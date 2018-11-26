@@ -12,7 +12,7 @@
         default-autowire="byName">
 
     <dubbo:application name="dubbox-entity-provider" />
-    <dubbo:registry address="zookeeper://172.16.7.113:2181" />
+    <dubbo:registry address="zookeeper://172.16.7.117:2181"/>
     <dubbo:protocol name="dubbo" serialization="kryo"/>
 
 

@@ -21,13 +21,13 @@
             <if test="agentName!=null and agentName=''">
                   agentName=#{agentName},
             </if>
-            <if test="agentAddress=null and agentAddress1=''">
+            <if test="agentAddress!=null and agentAddress!=''">
                 agentAddress=#{agentAddress},
             </if>
-            <if test="agentPhone!=null and agentPhone=''">
+            <if test="agentPhone!=null and agentPhone!=''">
                 agentPhone=#{agentPhone},
             </if>
-            <if test="agentPrice=null and agentPrice=''">
+            <if test="agentPrice!=null and agentPrice!=''">
                 agentPrice=#{agentPrice},
             </if>
         </set>
@@ -37,7 +37,7 @@
         delete from agent
         where uuid=#{uuid}
     </delete>
-    <select id="queryAgentRows" resultType="Agent">
+    <select id="queryAgentRows" resultType="_int">
       select  count(1) from agent
     </select>
 </mapper>

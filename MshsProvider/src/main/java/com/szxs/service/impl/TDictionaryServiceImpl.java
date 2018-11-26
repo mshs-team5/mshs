@@ -2,6 +2,7 @@ package com.szxs.service.impl;
 
 import com.szxs.dao.TDictionaryDao;
 import com.szxs.entity.JqueryTable;
+import com.szxs.entity.TDevuser;
 import com.szxs.entity.TDictionary;
 import com.szxs.service.TDictionaryService;
 import org.springframework.stereotype.Service;
@@ -16,5 +17,25 @@ public class TDictionaryServiceImpl implements TDictionaryService {
 
         JqueryTable<TDictionary> table=new JqueryTable<TDictionary>();
         return table;
+    }
+
+    public Integer addttDictionary(TDictionary tDictionary) {
+        return null;
+    }
+
+    public Integer delttDictionary(String s) {
+        return null;
+    }
+
+    public Integer updatettDictionary(TDictionary tDictionary) {
+        return null;
+    }
+
+    public TDictionary queryByid(String s) {
+        return null;
+    }
+
+    public Integer queryttDictionaryRows(TDictionary tDictionary) {
+        return null;
     }
 }

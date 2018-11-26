@@ -9,4 +9,5 @@ public interface AgentDao {
        Integer updateAgent(Agent agent);
        Integer delAgent(String uuid);
        Integer queryAgentsRows(Agent agent);
+       Agent queryByid(String uuid);
 }

@@ -11,35 +11,11 @@ import java.util.List;
 
 @Service
 public class TdevuserServiceImpl implements TdevuserService{
-
     @Resource
     public T_devuserDao t_devuserDao;
-<<<<<<< Updated upstream
-
-
-    public JqueryTable<TDevuser> queryAll(TDevuser tDevuser, Integer integer, Integer integer1, Integer integer2) {
-        return null;
-    }
-
     public Integer addtDevuser(TDevuser tDevuser) {
         return null;
     }
-
-    public Integer deltDevuser(String s) {
-        return null;
-    }
-
-    public Integer updatetDevuser(TDevuser tDevuser) {
-        return null;
-    }
-
-    public TDevuser queryByid(String s) {
-        return null;
-    }
-
-    public Integer querytDevuserRows(TDevuser tDevuser) {
-        return null;
-=======
     public JqueryTable<TDevuser> queryAll(TDevuser tDevuser, Integer integer, Integer integer1, Integer integer2) {
         JqueryTable<TDevuser> table=new JqueryTable<TDevuser>();
         table.setDraw(integer2);
@@ -47,27 +23,20 @@ public class TdevuserServiceImpl implements TdevuserService{
         table.setRecordsFiltered(table.getRecordsTotal());
         table.setData(t_devuserDao.queryAll(tDevuser,integer,integer1));
         return table;
->>>>>>> Stashed changes
-    }
 
-    public Integer addtDevuser(TDevuser tDevuser) {
-        return null;
     }
-
     public Integer deltDevuser(String s) {
-        return null;
+        return t_devuserDao.delTDevuser(s);
     }
 
     public Integer updatetDevuser(TDevuser tDevuser) {
-        return null;
+        return t_devuserDao.updateTDevuser(tDevuser);
     }
-
     public TDevuser queryByid(String s) {
-        return null;
+        return t_devuserDao.queryByid(s);
     }
-
     public Integer querytDevuserRows(TDevuser tDevuser) {
-        return null;
+        return t_devuserDao.queryTDevusersRows(tDevuser);
     }
 
 
