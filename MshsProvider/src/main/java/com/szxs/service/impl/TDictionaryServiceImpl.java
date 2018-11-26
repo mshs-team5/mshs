@@ -17,4 +17,24 @@ public class TDictionaryServiceImpl implements TDictionaryService {
         JqueryTable<TDictionary> table=new JqueryTable<TDictionary>();
         return table;
     }
+
+    public Integer addttDictionary(TDictionary tDictionary) {
+        return null;
+    }
+
+    public Integer delttDictionary(String s) {
+        return null;
+    }
+
+    public Integer updatettDictionary(TDictionary tDictionary) {
+        return null;
+    }
+
+    public TDictionary queryByid(String s) {
+        return null;
+    }
+
+    public Integer queryttDictionaryRows(TDictionary tDictionary) {
+        return null;
+    }
 }
