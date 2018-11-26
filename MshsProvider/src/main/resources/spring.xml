@@ -12,7 +12,8 @@
         default-autowire="byName">
 
     <dubbo:application name="dubbox-entity-provider" />
-    <dubbo:registry address="zookeeper://172.16.7.117:2181"/>
+
+    <dubbo:registry address="zookeeper://172.16.7.117:2181" />
     <dubbo:protocol name="dubbo" serialization="kryo"/>
 
 
@@ -30,7 +31,6 @@
     <dubbo:service interface="com.szxs.service.TDictionaryService" ref="tDictionaryService" protocol="dubbo" />
     <bean name="agentService" class="com.szxs.service.impl.AgentServiceImpl" />
     <dubbo:service interface="com.szxs.service.AgentService" ref="agentService" protocol="dubbo" />
-
     <bean name="tCityService" class="com.szxs.service.impl.TCityServiceImpl" />
     <dubbo:service interface="com.szxs.service.TCityService" ref="tCityService" protocol="dubbo" />
     <context:component-scan base-package="com.szxs.service"/>

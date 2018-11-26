@@ -35,7 +35,7 @@ public class TRolesServiceImpl implements TRolesService {
     }
 
     public TRoles queryByid(String s) {
-        return null;
+        return tRoleDao.queryByid(s);
     }
 
     public Integer querytttRolesRows(TRoles tRoles) {

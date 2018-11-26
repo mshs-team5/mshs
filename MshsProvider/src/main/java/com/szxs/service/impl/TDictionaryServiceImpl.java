@@ -12,29 +12,33 @@ import javax.annotation.Resource;
 public class TDictionaryServiceImpl implements TDictionaryService {
     @Resource
     public TDictionaryDao tDictionaryDao;
-    public JqueryTable<TDictionary> queryAll(TDictionary tDictionary, Integer integer, Integer integer1, Integer integer2) {
+    public JqueryTable<TDictionary> queryAll(TDictionary tDictionary,  Integer from, Integer end, Integer draw) {
 
         JqueryTable<TDictionary> table=new JqueryTable<TDictionary>();
+        table.setDraw(draw);
+        table.setRecordsTotal(tDictionaryDao.queryttDictionaryRows(tDictionary));
+        table.setRecordsFiltered(table.getRecordsTotal());
+        table.setData(tDictionaryDao.queryAll(tDictionary,from,end));
         return table;
     }
 
     public Integer addttDictionary(TDictionary tDictionary) {
-        return null;
+        return tDictionaryDao.addttDictionary(tDictionary);
     }
 
     public Integer delttDictionary(String s) {
-        return null;
+        return tDictionaryDao.delttDictionary(s);
     }
 
     public Integer updatettDictionary(TDictionary tDictionary) {
-        return null;
+        return tDictionaryDao.updatettDictionary(tDictionary);
     }
 
     public TDictionary queryByid(String s) {
-        return null;
+        return tDictionaryDao.queryByid(s);
     }
 
     public Integer queryttDictionaryRows(TDictionary tDictionary) {
-        return null;
+        return tDictionaryDao.queryttDictionaryRows(tDictionary);
     }
 }

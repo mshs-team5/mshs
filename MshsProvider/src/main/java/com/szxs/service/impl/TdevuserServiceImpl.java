@@ -7,8 +7,6 @@ import com.szxs.service.TdevuserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
-
 @Service
 public class TdevuserServiceImpl implements TdevuserService{
     @Resource
