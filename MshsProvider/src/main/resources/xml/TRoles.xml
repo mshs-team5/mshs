@@ -5,6 +5,37 @@
 <mapper namespace="com.szxs.dao.TRoleDao">
 
     <select id="queryAll" resultType="TRoles">
-        select * from t_users
+       select * from (
+        select temp.*,rownum row_ from (
+        select * from T_ROLES a
+        ) temp
+        ) where row_ between #{from}+1 and #{from}+#{end}
+    </select>
+    <insert id="addtttRoles">
+        insert into T_ROLES
+        values(#{id},#{name},#{descn},#{zhname})
+    </insert>
+    <update id="updatetttRoles">
+        update T_ROLES
+        <set>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="descn!=null and descn!=''">
+                descn=#{descn},
+            </if>
+            <if test="zhname!=null and zhname!=''">
+                zhname=#{zhname},
+            </if>
+
+        </set>
+        where uuid=#{uuid}
+    </update>
+    <delete id="deltttRoles">
+        delete from T_ROLES
+        where uuid=#{uuid}
+    </delete>
+    <select id="querytttRolesRows" resultType="TRoles">
+      select  count(1) from T_ROLES
     </select>
 </mapper>
