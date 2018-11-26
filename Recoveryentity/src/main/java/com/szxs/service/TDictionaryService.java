@@ -11,6 +11,6 @@ public interface TDictionaryService {
     Integer addttDictionary(TDictionary tDictionary);
     Integer delttDictionary(String  uuid);
     Integer updatettDictionary(TDictionary tDictionary);
-    TDevuser queryByid(String id);
+    TDictionary queryByid(String id);
     Integer queryttDictionaryRows(TDictionary tDictionary);
 }
