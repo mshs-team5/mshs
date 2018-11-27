@@ -17,7 +17,7 @@
     </select>
 
     <insert id="addTTheportal" >
-        insert into T_THEPORTAL VALUES(#{id},#{NAMEPORTAL},#{ADDRESSPORTAL},#{PORTALTIME},#{EXTFIELD1},#{EXTFIELD2})
+        insert into T_THEPORTAL VALUES(#{id},#{nameportal},#{addressportal},#{portaltime},#{extfield1},#{extfield2})
     </insert>
 
     <delete id="delTTTheportal" >
@@ -32,7 +32,7 @@
             <if test="addressportal!=null and addressportal!=''">
                 addressportal=#{addressportal},
             </if>
-            <if test="portaltime!=null and portaltime!=''">
+            <if test="portaltime!=null ">
                 portaltime=#{portaltime},
             </if>
             <if test="extfield1!=null and extfield1!=''">
