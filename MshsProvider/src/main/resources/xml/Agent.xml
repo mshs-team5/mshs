@@ -13,22 +13,22 @@
     </select>
     <insert id="addAgent">
         insert into AGENT
-        values(#{uuid},#{agentName},#{agentAddress},#{agentPhone},#{agentPrice},#{extfield1},#{extfield2})
+        values(#{uuid},#{agentname},#{agentaddress},#{agentphone},#{agentprice},#{extfield1},#{extfield2})
     </insert>
     <update id="updateAgent">
         update agent
         <set>
-            <if test="agentName!=null and agentName=''">
-                  agentName=#{agentName},
+            <if test="agentname!=null and agentname!=''">
+                agentname=#{agentname},
             </if>
-            <if test="agentAddress!=null and agentAddress!=''">
-                agentAddress=#{agentAddress},
+            <if test="agentaddress!=null and agentaddress!=''">
+                agentaddress=#{agentaddress},
             </if>
-            <if test="agentPhone!=null and agentPhone!=''">
-                agentPhone=#{agentPhone},
+            <if test="agentphone!=null and agentphone!=''">
+                agentphone=#{agentphone},
             </if>
-            <if test="agentPrice!=null and agentPrice!=''">
-                agentPrice=#{agentPrice},
+            <if test="agentprice!=null and agentprice!=''">
+                agentprice=#{agentprice},
             </if>
         </set>
         where uuid=#{uuid}
@@ -37,7 +37,7 @@
         delete from agent
         where uuid=#{uuid}
     </delete>
-    <select id="queryAgentRows" resultType="_int">
+    <select id="queryAgentsRows" resultType="_int">
       select  count(1) from agent
     </select>
 </mapper>

@@ -13,7 +13,7 @@
 
     <dubbo:application name="dubbox-entity-provider" />
 
-    <dubbo:registry address="zookeeper://172.16.7.117:2181" />
+    <dubbo:registry address="zookeeper://172.16.7.103:2181" />
     <dubbo:protocol name="dubbo" serialization="kryo"/>
 
 
@@ -22,6 +22,9 @@
 
     <bean name="tTheportalService" class="com.szxs.service.impl.TTheportalServiceImpl" />
     <dubbo:service interface="com.szxs.service.TTheportalService" ref="tTheportalService" protocol="dubbo" />
+
+    <bean name="tRolesService" class="com.szxs.service.impl.TRolesServiceImpl" />
+    <dubbo:service interface="com.szxs.service.TRolesService" ref="tRolesService" protocol="dubbo" />
 
     <bean name="userService" class="com.szxs.service.impl.UserServiceImpl" />
     <dubbo:service interface="com.szxs.service.UserService" ref="userService" protocol="dubbo" />

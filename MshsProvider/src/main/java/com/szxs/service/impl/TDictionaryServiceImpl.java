@@ -36,7 +36,9 @@ public class TDictionaryServiceImpl implements TDictionaryService {
         return tDictionaryDao.updatettDictionary(tDictionary);
     }
 
-
+    public TDictionary queryByid(String s) {
+        return null;
+    }
 
 
     public Integer queryttDictionaryRows(TDictionary tDictionary) {
