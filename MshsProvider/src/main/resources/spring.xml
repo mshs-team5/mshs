@@ -13,7 +13,7 @@
 
     <dubbo:application name="dubbox-entity-provider" />
 
-    <dubbo:registry address="zookeeper://172.16.7.103:2181" />
+    <dubbo:registry address="zookeeper://172.16.7.180:2181" />
     <dubbo:protocol name="dubbo" serialization="kryo"/>
 
 

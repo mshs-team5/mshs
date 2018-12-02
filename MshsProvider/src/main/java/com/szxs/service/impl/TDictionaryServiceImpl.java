@@ -15,7 +15,6 @@ public class TDictionaryServiceImpl implements TDictionaryService {
     @Resource
     public TDictionaryDao tDictionaryDao;
     public JqueryTable<TDictionary> queryAll(TDictionary tDictionary,  Integer from, Integer end, Integer draw) {
-
         JqueryTable<TDictionary> table=new JqueryTable<TDictionary>();
         table.setDraw(draw);
         table.setRecordsTotal(tDictionaryDao.queryttDictionaryRows(tDictionary));
